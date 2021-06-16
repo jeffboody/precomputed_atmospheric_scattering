@@ -7,3 +7,24 @@
 [submodule "external/minpng"]
 	path = external/minpng
 	url = https://github.com/jrmuizel/minpng
+[submodule "atmosphere/demovk/app/src/main/cpp/libvkk"]
+	path = atmosphere/demovk/app/src/main/cpp/libvkk
+	url = git@github.com:jeffboody/libvkk.git
+[submodule "atmosphere/demovk/app/src/main/cpp/libcc"]
+	path = atmosphere/demovk/app/src/main/cpp/libcc
+	url = git@github.com:jeffboody/libcc.git
+[submodule "atmosphere/demovk/app/src/main/cpp/libpak"]
+	path = atmosphere/demovk/app/src/main/cpp/libpak
+	url = git@github.com:jeffboody/libpak.git
+[submodule "atmosphere/demovk/app/src/main/cpp/libxmlstream"]
+	path = atmosphere/demovk/app/src/main/cpp/libxmlstream
+	url = git@github.com:jeffboody/libxmlstream.git
+[submodule "atmosphere/demovk/app/src/main/cpp/texgz"]
+	path = atmosphere/demovk/app/src/main/cpp/texgz
+	url = git@github.com:jeffboody/texgz.git
+[submodule "atmosphere/demovk/app/src/main/cpp/libexpat"]
+	path = atmosphere/demovk/app/src/main/cpp/libexpat
+	url = git@github.com:jeffboody/libexpat.git
+[submodule "atmosphere/demovk/app/src/main/cpp/lodepng"]
+	path = atmosphere/demovk/app/src/main/cpp/lodepng
+	url = git@github.com:lvandeve/lodepng.git
