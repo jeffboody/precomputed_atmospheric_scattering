@@ -15,7 +15,7 @@ layout(std140, set=0, binding=4) uniform uniformExposure
 
 layout(std140, set=0, binding=5) uniform uniformWhitePoint
 {
-	// x, y, z, 0
+	// r, g, b, 0
 	vec4 white_point;
 };
 
@@ -1116,6 +1116,6 @@ void main() {
     radiance = radiance + transmittance * GetSolarRadiance();
   }
   fragColor.rgb =
-      pow(vec3(1.0) - exp(-radiance / white_point.xyz * exposure), vec3(1.0 / 2.2));
+      pow(vec3(1.0) - exp(-radiance / white_point.rgb * exposure), vec3(1.0 / 2.2));
   fragColor.a = 1.0;
 }
