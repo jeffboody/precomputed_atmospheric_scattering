@@ -290,7 +290,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	};
 
 	self->usf0_state = vkk_uniformSetFactory_new(self->engine,
-	                                             VKK_UPDATE_MODE_DEFAULT,
+	                                             VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                             9, ub_array0);
 	if(self->usf0_state == NULL)
 	{
@@ -434,7 +434,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub00_mvp = vkk_buffer_new(self->engine,
-	                                VKK_UPDATE_MODE_DEFAULT,
+	                                VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                VKK_BUFFER_USAGE_UNIFORM,
 	                                sizeof(cc_mat4f_t),
 	                                NULL);
@@ -444,7 +444,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub01_model_from_view = vkk_buffer_new(self->engine,
-	                                            VKK_UPDATE_MODE_DEFAULT,
+	                                            VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                            VKK_BUFFER_USAGE_UNIFORM,
 	                                            sizeof(cc_mat4f_t),
 	                                            NULL);
@@ -454,7 +454,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub02_view_from_clip = vkk_buffer_new(self->engine,
-	                                           VKK_UPDATE_MODE_DEFAULT,
+	                                           VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                           VKK_BUFFER_USAGE_UNIFORM,
 	                                           sizeof(cc_mat4f_t),
 	                                           NULL);
@@ -464,7 +464,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub03_camera = vkk_buffer_new(self->engine,
-	                                   VKK_UPDATE_MODE_DEFAULT,
+	                                   VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                   VKK_BUFFER_USAGE_UNIFORM,
 	                                   sizeof(cc_vec4f_t),
 	                                   NULL);
@@ -474,7 +474,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub04_exposure = vkk_buffer_new(self->engine,
-	                                     VKK_UPDATE_MODE_DEFAULT,
+	                                     VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                     VKK_BUFFER_USAGE_UNIFORM,
 	                                     sizeof(float),
 	                                     NULL);
@@ -484,7 +484,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub05_white_point = vkk_buffer_new(self->engine,
-	                                        VKK_UPDATE_MODE_DEFAULT,
+	                                        VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                        VKK_BUFFER_USAGE_UNIFORM,
 	                                        sizeof(cc_vec4f_t),
 	                                        NULL);
@@ -494,7 +494,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub06_earth_center = vkk_buffer_new(self->engine,
-	                                         VKK_UPDATE_MODE_DEFAULT,
+	                                         VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                         VKK_BUFFER_USAGE_UNIFORM,
 	                                         sizeof(cc_vec4f_t),
 	                                         NULL);
@@ -504,7 +504,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub07_sun_direction = vkk_buffer_new(self->engine,
-	                                          VKK_UPDATE_MODE_DEFAULT,
+	                                          VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                          VKK_BUFFER_USAGE_UNIFORM,
 	                                          sizeof(cc_vec4f_t),
 	                                          NULL);
@@ -514,7 +514,7 @@ atmo_renderer_new(vkk_engine_t* engine)
 	}
 
 	self->ub08_sun_size = vkk_buffer_new(self->engine,
-	                                     VKK_UPDATE_MODE_DEFAULT,
+	                                     VKK_UPDATE_MODE_ASYNCHRONOUS,
 	                                     VKK_BUFFER_USAGE_UNIFORM,
 	                                     sizeof(cc_vec2f_t),
 	                                     NULL);
@@ -788,7 +788,7 @@ void atmo_renderer_draw(atmo_renderer_t* self)
 	};
 
 	if(vkk_renderer_beginDefault(rend,
-	                             VKK_RENDERER_MODE_PRIMARY,
+	                             VKK_RENDERER_MODE_DRAW,
 	                             clear_color) == 0)
 	{
 		return;
